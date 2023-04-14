@@ -7,7 +7,7 @@ string[] favoritFood = { "pomodori all'insalata", "carbonara", "patate al forno"
     Console.WriteLine("i miei cibi preferiti in totale sono: " +  favoritFood.Length);
 
 
-    Console.WriteLine("------------------------------------------------------------");
+    Console.WriteLine("---------------------------------------------------------------");
 
 ArrayList(favoritFood);
 
@@ -23,12 +23,18 @@ void ArrayList(string[] array)
         Console.WriteLine((i) + " " + array[i]);
     }
 
-       Console.WriteLine("---------fine lista----------------");
-    preferFood(array);
+       Console.WriteLine("---------fine lista-------------------------");
+    preferAndWorstFood(array);
 }
 
-void preferFood(string[] array)
+void preferAndWorstFood(string[] array)
+
 {
+    Console.WriteLine("----cibo preferito tra tutti e cibo meno preferito--------------");
     Console.WriteLine("il mio preferito fra tutti e': " + array[3]);
+    Console.WriteLine("il mio cibo meno preferito e': " + array[4]);
 
 }
+
+
+
