@@ -29,6 +29,8 @@ printArraystr(preferFoodUser);
 medianArrayPrint(preferFoodUser);
 
 
+
+
 //funzione per stampare la lista 
 void printArraystr(string[] array)
 {
@@ -42,24 +44,24 @@ void printArraystr(string[] array)
         else
         {
             Console.Write((i + 1) + " " + array[i] + ", ");
-        }
+        };
     }
     Console.WriteLine("]");
-}
+};
 
 void medianArrayPrint(string[] array)
 
 {
 
-   
 
-    for(int i = 0; i < array.Length; i++)
+
+    for (int i = 0; i < array.Length; i++)
     {
-        if(i == array.Length / 2)
-            {
-                Console.WriteLine("----------------la posizione a meta' e': " + array[i]);
-            }
-       
-     }
-    
-}
+        if ( array.Length % 2 == 1)
+        {
+            Console.WriteLine("----------------la posizione a meta' e': " + array.Length / 2 );
+        };
+
+    };
+
+};
