@@ -2,7 +2,7 @@
 Console.WriteLine("--------------quanti cibi preferiti hai?---------------------------");
 
 Console.WriteLine("inserisci quanti cibi preferiti hai");
-//strnga che prende input di quanti cibi preferiti ha l'user
+//variabile che prende una strnga che prende input di quanti cibi preferiti ha l'user 
 string inputUser = Console.ReadLine();
 
 //conversione da stringa a num
@@ -19,4 +19,28 @@ for(int i = 0; i < preferFoodUser.Length; i++)
 {
     Console.WriteLine($"inserisci {i+ 1} cibo preferito");
     preferFoodUser[i] = Console.ReadLine();
+}
+
+
+printArraystr(preferFoodUser);
+
+
+
+
+//funzione per stampare la lista 
+void printArraystr(string[] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i == array.Length - 1)
+        {
+            Console.Write((i + 1) + " " + array[i]);
+        }
+        else
+        {
+            Console.Write((i + 1) + " " + array[i] + ", ");
+        }
+    }
+    Console.Write("]");
 }
