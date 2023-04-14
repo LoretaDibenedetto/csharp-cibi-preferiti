@@ -48,13 +48,18 @@ void printArraystr(string[] array)
 }
 
 void medianArrayPrint(string[] array)
+
 {
+
+   
+
     for(int i = 0; i < array.Length; i++)
     {
         if(i == array.Length / 2)
             {
-                Console.WriteLine(array[i]);
+                Console.WriteLine("----------------la posizione a meta' e': " + array[i]);
             }
        
      }
+    
 }
