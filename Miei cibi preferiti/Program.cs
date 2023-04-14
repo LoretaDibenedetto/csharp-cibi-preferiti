@@ -17,11 +17,18 @@ ArrayList(favoritFood);
 
 void ArrayList(string[] array)
 {
-   for(int i  = 1; i < array.Length; i++)
+        Console.WriteLine("-----inizio lista di cibi preferiti--------");
+    for (int i = 1; i < array.Length; i++)
     {
         Console.WriteLine((i) + " " + array[i]);
     }
 
-   
+       Console.WriteLine("---------fine lista----------------");
+    preferFood(array);
 }
 
+void preferFood(string[] array)
+{
+    Console.WriteLine("il mio preferito fra tutti e': " + array[3]);
+
+}
