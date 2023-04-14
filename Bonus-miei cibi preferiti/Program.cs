@@ -1,5 +1,6 @@
 ﻿
 using System.ComponentModel.Design;
+using System.Linq.Expressions;
 
 Console.WriteLine("--------------quanti cibi preferiti hai?---------------------------");
 
@@ -9,6 +10,12 @@ string inputUser = Console.ReadLine();
 
 //conversione da stringa a num
 int inputUserNumber = int.Parse(inputUser);
+while (inputUserNumber < 0 || inputUserNumber == 0 )
+{
+    Console.WriteLine("Mi dispiace, non hai inserito un numero superiore allo 0 Ritenta: ");
+    inputUser= Console.ReadLine();
+    inputUserNumber = int.Parse(inputUser);
+}
 
 
 //dichiaro un array di stringhe con dentro l'input di sopra dell'user
@@ -54,14 +61,22 @@ void medianArrayPrint(string[] array)
 {
 
 
-
-    for (int i = 0; i < array.Length; i++)
+    if (array.Length % 2 == 1) {
+    
+    
+    
+    int half = array.Length / 2 + 1;
+       Console.WriteLine("il cibo nella posizione mediana si trova" + half);
+    
+    }else if (array.Length % 2 == 0)
     {
-        if ( array.Length % 2 == 1)
-        {
-            Console.WriteLine("----------------la posizione a meta' e': " + array.Length / 2 );
-        };
+     
+        int half1 = array.Length / 2 + 1;
+        int half2 = array.Length / 2 ;
 
-    };
+        Console.WriteLine("i cibi mediani si trovano nella posizione:" + half2+ " e "+ half1);
+    }
+    
+
 
 };
