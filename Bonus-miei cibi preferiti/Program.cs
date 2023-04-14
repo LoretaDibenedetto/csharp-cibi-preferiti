@@ -1,4 +1,6 @@
 ﻿
+using System.ComponentModel.Design;
+
 Console.WriteLine("--------------quanti cibi preferiti hai?---------------------------");
 
 Console.WriteLine("inserisci quanti cibi preferiti hai");
@@ -24,7 +26,7 @@ for(int i = 0; i < preferFoodUser.Length; i++)
 
 printArraystr(preferFoodUser);
 
-
+medianArrayPrint(preferFoodUser);
 
 
 //funzione per stampare la lista 
@@ -42,5 +44,17 @@ void printArraystr(string[] array)
             Console.Write((i + 1) + " " + array[i] + ", ");
         }
     }
-    Console.Write("]");
+    Console.WriteLine("]");
+}
+
+void medianArrayPrint(string[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(i == array.Length / 2)
+            {
+                Console.WriteLine(array[i]);
+            }
+       
+     }
 }
